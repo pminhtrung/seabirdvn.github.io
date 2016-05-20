@@ -9,13 +9,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>Nha Trang discover</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/grayscale.min.css" rel="stylesheet">
+    
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -28,6 +30,17 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBMQzyhJ_XcstXvFBw2siTd67Y2b8ZCR40",
+        authDomain: "nha-trang-locations.firebaseapp.com",
+        databaseURL: "https://nha-trang-locations.firebaseio.com",
+        storageBucket: "nha-trang-locations.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
 
 </head>
 
@@ -62,7 +75,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Grayscale</h1>
+                        <h1 class="brand-heading">Nha Trang</h1>
                         <p class="intro-text">A free, responsive, one page Bootstrap theme.
                             <br>Created by Start Bootstrap.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
