@@ -57,13 +57,15 @@
     </svg>
 
     <script>
-    function setFill(objectId, label){
+    
+    $(document).ready(function () {
+        function setFill(objectId, label){
     		var percent = label;
     		$("#percent"+objectId).attr("offset", percent);
     		$("#label"+objectId).text(label);
 
     	};
-    $(document).ready(function () {
+    	
     	$.getJSON( "value.json", function( data ) {    		
     		$.each( data, function( key, val ) {
     			//setFill(key, val);
