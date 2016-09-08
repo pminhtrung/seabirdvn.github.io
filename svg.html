@@ -143,9 +143,14 @@
     	};
     	$.ajaxSetup({ cache: false });
     	
+    	var jsonurl = "giatri.json";
+    	if($.urlParam('jsonurl')){
+    	    jsonurl = $.urlParam('jsonurl');
+    	}
+    	
     	setInterval(function(){
     	 
-    	$.getJSON( "giatri.json", function( data ) { 
+    	$.getJSON(jsonurl, function( data ) { 
     	    
     		$.each( data, function( key, val ) {
     			setFill(key, val);
