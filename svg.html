@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style media="screen">
+        	body {
+        		background: #fff;
+        	}
+        </style>
+
+    	<script src="dist/snap.svg-min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    	
+    </head>
+    <body>
+
+    <svg width="800" height="600">
+    <linearGradient id="lg1" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" stop-opacity="1" stop-color="royalblue"/>
+      <stop offset="0%" id="percent1" stop-opacity="1" stop-color="royalblue"/>
+
+      <stop offset="0%" stop-opacity="0" stop-color="royalblue"/>
+      <stop offset="100%" stop-opacity="0" stop-color="royalblue"/>
+    </linearGradient>
+
+    <linearGradient id="lg2" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" stop-opacity="1" stop-color="royalblue"/>
+      <stop offset="0%" id="percent2" stop-opacity="1" stop-color="royalblue"/>
+      <stop offset="0%" stop-opacity="0" stop-color="royalblue"/>
+      <stop offset="100%" stop-opacity="0" stop-color="royalblue"/>
+    </linearGradient>
+
+    <linearGradient id="lg3" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" stop-opacity="1" stop-color="royalblue"/>
+      <stop offset="0%" id="percent3" stop-opacity="1" stop-color="royalblue"/>
+      <stop offset="0%" stop-opacity="0" stop-color="royalblue"/>
+      <stop offset="100%" stop-opacity="0" stop-color="royalblue"/>
+    </linearGradient>
+
+    <g>
+    <circle id="cicle1" cx="100" cy="100" r="80" stroke="black" stroke-width="3" fill="url(#lg1)" />
+    <text id="label1" x="100" y="100" text-anchor="middle" stroke="red"  stroke-width="3px" font-size="30px" dy="0em">0</text>
+    </g>
+
+    <g>
+    <circle id="cicle2" cx="280" cy="100" r="80" stroke="black" stroke-width="3" fill="url(#lg2)" />
+    <text id="label2" x="280" y="100" text-anchor="middle" stroke="red"  stroke-width="3px" font-size="30px" dy="0em">0</text>
+    </g>
+
+    <g>
+    <circle id="cicle3" cx="460" cy="100" r="80" stroke="black" stroke-width="3" fill="url(#lg3)" />
+    <text id="label3" x="460" y="100" text-anchor="middle" stroke="red"  stroke-width="3px" font-size="30px" dy="0em">0</text>
+    </g>
+
+
+
+    </svg>
+
+    <script>
+    function setFill(objectId, label){
+    		var percent = label;
+    		$("#percent"+objectId).attr("offset", percent);
+    		$("#label"+objectId).text(label);
+
+    	};
+    $(document).ready(function () {
+    	$.getJSON( "value.json", function( data ) {    		
+    		$.each( data, function( key, val ) {
+    			setFill(key, val);
+  			});
+    	});
+
+    });
+
+
+    </script>
+
+    </body>
+</html>
