@@ -65,7 +65,7 @@
     		$("#label"+objectId).text(label);
 
     	};
-    	
+    	setTimeout(function(){
     	$.getJSON( "giatri.json", function( data ) { 
     	    
     		$.each( data, function( key, val ) {
@@ -74,6 +74,7 @@
     		    
   			});
     	});
+    	},1000);
 
     });
 
