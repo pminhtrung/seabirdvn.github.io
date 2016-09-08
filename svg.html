@@ -65,10 +65,8 @@
     		$("#label"+objectId).text(label);
 
     	};
-    	$.ajax({
-            cache: false,
-            //other options...
-        });
+    	$.ajaxSetup({ cache: false });
+    	
     	setInterval(function(){
     	 
     	$.getJSON( "giatri.json", function( data ) { 
